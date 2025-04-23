@@ -1,0 +1,187 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 25px;
+}
+.card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+.card p {
+  font-size: 15px;
+  color: #7f8c8d;
+  margin-bottom: 12px;
+}
+.connect-wallet {
+  text-align: center;
+  padding: 50px;
+}
+.connect-wallet h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background-color: #3498db;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #2980b9;
+}
+.btn-success {
+  background-color: #2ecc71;
+  color: #fff;
+}
+.btn-success:hover {
+  background-color: #27ae60;
+}
+.btn-danger {
+  background-color: #e74c3c;
+  color: #fff;
+}
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+.btn-warning {
+  background-color: #f1c40f;
+  color: #fff;
+}
+.btn-warning:hover {
+  background-color: #d4ac0d;
+}
+.btn-secondary {
+  background-color: #95a5a6;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+@media (min-width: 1024px) {
+  .grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+select, input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 550px;
+  width: 100%;
+}
+.modal-content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.modal-content p {
+  font-size: 15px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+}
+.info-panel {
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+}
+.info-panel h3 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+.info-panel ul {
+  list-style: disc;
+  padding-left: 25px;
+  font-size: 15px;
+  color: #34495e;
+}
+.info-panel ul li {
+  margin-bottom: 8px;
+}
+.recent-events {
+  max-height: 280px;
+  overflow-y: auto;
+}
+.event-item {
+  border-bottom: 1px solid #ecf0f1;
+  padding: 12px 0;
+}
+.event-item:last-child {
+  border-bottom: none;
+}
+.text-success {
+  color: #2ecc71;
+}
+.text-danger {
+  color: #e74c3c;
+}
+.text-primary {
+  color: #3498db;
+}
+.text-warning {
+  color: #f1c40f;
+}
+.text-muted {
+  color: #95a5a6;
+}

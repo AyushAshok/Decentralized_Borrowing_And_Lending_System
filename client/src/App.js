@@ -31,7 +31,7 @@ function App() {
     const [loansList, setLoansList] = useState([]);
     const [showRepayConfirm, setShowRepayConfirm] = useState(null);
 
-    // Connect to MetaMask
+    // Connection  to the MetaMask Wallet
     const connectWallet = async () => {
         if (!window.ethereum) {
             toast.error("Please install MetaMask!");
@@ -67,7 +67,7 @@ function App() {
         }
     };
 
-    // Update contract signer when account changes
+    // Update contract signer when account changes (When Metamask account changes, updates the details)
     const updateContractSigner = async (account) => {
         if (account && provider) {
             try {
@@ -87,7 +87,7 @@ function App() {
         }
     };
 
-    // Setup event listeners for the contract
+    // Setup event listeners for the change in contract states
     const setupEventListeners = (contractInstance) => {
         if (!contractInstance) return;
 

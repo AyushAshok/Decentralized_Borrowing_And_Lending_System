@@ -34,20 +34,11 @@ contract Lending {
     function requestLoan(uint256 amt, address lender) public payable {
         require(amt > 0, "Loan amount must be > 0");
         require(lender != address(0), "Invalid lender address");
-        require(
-            lenderContributions[lender] > 5,
-            "Lender has not contributed atleast 5 ETH to pool"
-        );
-        require(
-            msg.value >= (amt * 10) / 100,
-            "Collateral must be >= 10% of loan"
-        );
+        require(lenderContributions[lender] > 5,"Lender has not contributed atleast 5 ETH to pool");
+        require(msg.value >= (amt * 10) / 100,"Collateral must be >= 10% of loan");
 
         Loan storage existingLoan = loans[msg.sender];
-        require(
-            existingLoan.state == State.Defaulted || existingLoan.state == State.Repaid || existingLoan.state == State.Cancelled || existingLoan.state == State(0),
-            "Repay or cancel existing loan first"
-        );
+        require(existingLoan.state == State.Defaulted || existingLoan.state == State.Repaid || existingLoan.state == State.Cancelled || existingLoan.state == State(0),"Repay or cancel existing loan first");
 
         uint256 repay_amt = RepayAmount(amt);
 
